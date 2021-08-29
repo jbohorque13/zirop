@@ -1,21 +1,27 @@
-import * as React from "react"
+import * as React from "react";
+import Layout from '../common/components/Layout';
+// imports common components 
+import HeaderMenu from '../common/components/HeaderMenu';
+//import pages from '../common/data/pages';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+const pages = {
+  'abouts-us': 'About Us',
+  'our-services': 'Our Services',
+  'our-culture': 'Our Culture',
+  'founders': 'Founders',
+  'contact': 'Contact',
 }
-
 
 // markup
 const IndexPages = ({ props }) => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1> {props} csdc </h1>
-    </main>
-  )
+    <Layout>
+      <HeaderMenu 
+        {...props}
+        pages={pages}
+      />
+    </Layout>
+  ) 
 }
 
 export default IndexPages
