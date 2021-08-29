@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
         <React.Fragment> 
           <GlobalStyle  theme="purple" />
           {children}
-          {console.log(children._owner.key)}
           <main style={stylesDivTest}>
               <h1>
                   {children._owner.key.replaceAll('/', '')}
