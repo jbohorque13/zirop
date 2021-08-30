@@ -13,10 +13,11 @@ import { Section, Text, Title } from './styled/index';
 const SectionUI = (props) => {
     return (
         <Section { ...props.style } >
-                <Title { ...props.style }>Prueba de Section</Title>
-                <Text { ...props.style }> subtitulo</Text>
+            { props.children }
         </Section>
     );
+    
+    
 }
 
 export default SectionUI;

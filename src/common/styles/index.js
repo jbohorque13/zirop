@@ -1,6 +1,7 @@
 export const section = {
-    alignItems: "flex-end", 
+    alignItems: "center", 
     justifyContent: "center", 
     color: 'white',
     fontSize: '36px',
+    flexDirection: 'column',
 }

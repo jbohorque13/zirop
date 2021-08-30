@@ -3,6 +3,11 @@ import Layout from '../../common/components/Layout';
 // imports common components 
 import HeaderMenu from '../../common/components/HeaderMenu';
 //import pages from '../../common/data/pages';
+import SectionUI from '../../common/components/Section';
+import { Text, Title } from '../../common/components/styled';
+
+import { section } from '../../common/styles/';
+
 
 const pages = {
     'abouts-us': 'About Us',
@@ -19,6 +24,14 @@ const Index1 = ({ props }) => {
             {...props}
             pages={pages}
           />
+          <SectionUI style={{ ...section, paddingHorizontal: '25px' }}>
+            <Title {...section }>
+               Our Services
+            </Title>
+            <Text { ...section }>
+               We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
+            </Text>
+          </SectionUI>
         </Layout>
       ) 
 } 
