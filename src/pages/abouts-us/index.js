@@ -3,6 +3,8 @@ import Layout from '../../common/components/Layout';
 // imports common components 
 import HeaderMenu from '../../common/components/HeaderMenu';
 import SectionUI from '../../common/components/Section';
+import { section } from '../../common/styles/';
+
 const pages = {
     'abouts-us': 'About Us',
     'our-services': 'Our Services',
@@ -18,7 +20,7 @@ const Index5 = ({ props }) => {
             {...props}
             pages={pages}
           />
-          <SectionUI style={{ alignItems:"flex-end" }}/>
+          <SectionUI style={section}/>
         </Layout>
       ) 
 } 

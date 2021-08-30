@@ -1,10 +1,20 @@
 import * as React from 'react';
-import { Section } from './styled/index';
+import { Section, Text, Title } from './styled/index';
+
+
+/* props => 
+   * title: string
+   * description: string
+   * image?: string
+   * backgroundImage?: string
+   * urlLink?: string
+*/
 
 const SectionUI = (props) => {
     return (
         <Section { ...props.style } >
-            <h1>Prueba de Section</h1>
+                <Title { ...props.style }>Prueba de Section</Title>
+                <Text { ...props.style }> subtitulo</Text>
         </Section>
     );
 }
