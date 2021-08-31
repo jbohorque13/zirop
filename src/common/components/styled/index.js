@@ -12,9 +12,22 @@ export const Section = styled.section`
 export const Title = styled.h1`
     color: ${props => (props.color)};
     font-size: ${props => (props.fontSize)};
-    font-weight: 600
+    font-weight: ${props => (props.fontWeight)}
 `
 
 export const Text = styled.p`
     color: ${props => (props.color)};
+    font-size: ${props => (props.fontSize)};
+`
+
+export const Button = styled.button`
+    display: flex;
+    width: ${props => (props.width)};
+    height: ${props => (props.height)};
+    justify-content: ${props => (props.justifyContent)};
+    align-items: ${props => (props.alignItems)};
+    background-color: ${props => (props.backgroundColor)};
+    border-radius: ${props => (props.borderRadius)};
+    border-color: ${props => (props.borderColor)};
+    border-width: ${props => (props.borderWidth)};
 `

@@ -8,12 +8,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 `
-const stylesDivTest = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-}
-
 const Layout = ({ children }) => {
     return (
         <React.Fragment> 

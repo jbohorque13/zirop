@@ -15,11 +15,6 @@ const MenuRow = styled.li`
     justify-content: center;
     align-items: center;
 `   
-
-const MenuItem = styled.a`
-    color: #fff
-`
-
 const stylesLink = {
     fontSize: 16,
     color: '#fff',

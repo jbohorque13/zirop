@@ -6,7 +6,7 @@ import HeaderMenu from '../../common/components/HeaderMenu';
 import SectionUI from '../../common/components/Section';
 import { Text, Title } from '../../common/components/styled';
 
-import { section } from '../../common/styles/';
+import { sectionStyles } from '../../common/styles/';
 
 
 const pages = {
@@ -24,11 +24,11 @@ const Index1 = ({ props }) => {
             {...props}
             pages={pages}
           />
-          <SectionUI style={{ ...section, paddingHorizontal: '25px' }}>
-            <Title {...section }>
+          <SectionUI style={{ ...sectionStyles, paddingHorizontal: '25px' }}>
+            <Title {...sectionStyles }>
                Our Services
             </Title>
-            <Text { ...section }>
+            <Text { ...sectionStyles }>
                We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
             </Text>
           </SectionUI>

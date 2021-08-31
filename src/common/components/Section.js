@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Section, Text, Title } from './styled/index';
+import { Section, } from './styled/index';
 
 
 /* props => 
