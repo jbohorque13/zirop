@@ -9,17 +9,19 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const Layout = ({ children }) => {
-    const [pageYOffset, setPageYOffset] = useState(window.pageYOffset);
+    const [pageYScroll, setPageYScroll] = useState(0);
     const [showMenu, setShowMenu] = useState(true);
 
     useEffect(() => {
       const handleScroll = () => {
-        if (window.pageYOffset > pageYOffset) {
+        const { pageYOffset } = window;
+        console.log(pageYOffset, pageYScroll);
+        if (pageYOffset > pageYScroll) {
           setShowMenu(false)
         } else {
           setShowMenu(true)
         }
-        setPageYOffset(window.pageYOffset);
+        setPageYScroll(pageYOffset);
       }
       window.addEventListener('scroll', handleScroll);
     });

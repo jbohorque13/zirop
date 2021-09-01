@@ -16,7 +16,6 @@ const pages = {
 }
 
 const Index5 = ({ props }) => {
-  //console.log( 'dcs', ...{ ...section, fontSize: '42px'  });
   
     return (
         <Layout>
