@@ -3,28 +3,15 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from "gatsby";
 import Layout from '../common/components/Layout';
 // imports common components 
-import HeaderMenu from '../common/components/HeaderMenu';
 import SectionUI from '../common/components/Section';
 import { Text, Title } from '../common/components/styled';
-import { sectionStyles, titleStyles, linkButtonStyles } from '../common/styles/';
-
-const pages = {
-  'abouts-us': 'About Us',
-  'our-services': 'Our Services',
-  'our-culture': 'Our Culture',
-  'founders': 'Founders',
-  'contact': 'Contact',
-}
+import { sectionStyles, titleStyles, linkButtonStyles } from '../common/components/styles';
 
 // markup
 const IndexPages = ({ props }) => {
   return (
     <Layout>
-      <HeaderMenu 
-        {...props}
-        pages={pages}
-      />
-      <SectionUI style={{ ...sectionStyles, flexDirection: 'row', paddingHorizontal: '50px' }}>
+      <SectionUI style={{ ...sectionStyles, flexDirection: 'row', paddingHorizontal: '50px', paddingVertical: '40px' }}>
         <SectionUI style={{ ...sectionStyles, paddingHorizontal: '50px' }}>
           <Title {...titleStyles }>
             Abount Us 

@@ -2,28 +2,15 @@ import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../../common/components/Layout';
 // imports common components 
-import HeaderMenu from '../../common/components/HeaderMenu';
 import SectionUI from '../../common/components/Section';
 import { Text, Title } from '../../common/components/styled';
-import { sectionStyles } from '../../common/styles/';
-
-const pages = {
-    'abouts-us': 'About Us',
-    'our-services': 'Our Services',
-    'our-culture': 'Our Culture',
-    'founders': 'Founders',
-    'contact': 'Contact',
-}
+import { sectionStyles } from '../../common/components/styles';
 
 const Index5 = ({ props }) => {
   
     return (
         <Layout>
-          <HeaderMenu 
-            {...props}
-            pages={pages}
-          />
-          <SectionUI style={{ ...sectionStyles, paddingHorizontal: '25px' }}>
+          <SectionUI style={{ ...sectionStyles, paddingHorizontal: '25px', paddingVertical: '30px' }}>
             <Title {...sectionStyles }>
               Abount Us 
             </Title>

@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { createGlobalStyle } from "styled-components"
 import Context from './Context';
+import HeaderMenu from './HeaderMenu';
+import { GlobalStyle } from "../styles/index";
+
 // styles
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${props => (props.theme === "purple" ? "purple" : "white")};
-    margin: 0;
-  }
-`
+
+const pages = {
+  'abouts-us': 'About Us',
+  'our-services': 'Our Services',
+  'our-culture': 'Our Culture',
+  'founders': 'Founders',
+  'contact': 'Contact',
+}
+
 const Layout = ({ children }) => {
     const [pageYScroll, setPageYScroll] = useState(0);
     const [showMenu, setShowMenu] = useState(true);
@@ -29,6 +34,10 @@ const Layout = ({ children }) => {
     return (
         <Context.Provider value={showMenu}> 
           <GlobalStyle theme="purple" />
+          <HeaderMenu 
+            pages={pages}
+          />
+          
           {children}
         </Context.Provider>
     )

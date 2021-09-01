@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import { Section, } from './styled/index';
-
 
 /* props => 
    * title: string
@@ -16,8 +15,6 @@ const SectionUI = (props) => {
             { props.children }
         </Section>
     );
-    
-    
 }
 
 export default SectionUI;
