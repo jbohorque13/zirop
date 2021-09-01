@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { createGlobalStyle } from "styled-components"
-
+import Context from './Context';
 // styles
 const GlobalStyle = createGlobalStyle`
   body {
@@ -9,12 +9,29 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const Layout = ({ children }) => {
+    const [pageYOffset, setPageYOffset] = useState(window.pageYOffset);
+    const [showMenu, setShowMenu] = useState(true);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.pageYOffset > pageYOffset) {
+          setShowMenu(false)
+        } else {
+          setShowMenu(true)
+        }
+        setPageYOffset(window.pageYOffset);
+      }
+      window.addEventListener('scroll', handleScroll);
+    });
+
     return (
-        <React.Fragment> 
+        <Context.Provider value={showMenu}> 
           <GlobalStyle theme="purple" />
           {children}
-        </React.Fragment>
+        </Context.Provider>
     )
 }
+
+
 
 export default Layout;

@@ -31,3 +31,21 @@ export const Button = styled.button`
     border-color: ${props => (props.borderColor)};
     border-width: ${props => (props.borderWidth)};
 `
+export const List = styled.ul`
+    display: ${props => props.display};
+    flex: ${props => props.flex};
+    position: ${props => props.position};
+    left: 0;
+    right: 0;
+    background-color: ${props => props.backgroundColor};
+    padding: ${props => props.padding};
+    margin: ${props => props.margin};
+    padding: ${props => props.padding};
+`
+
+export const ItemList = styled.li`
+    display: ${props => props.display};
+    flex: ${props => props.flex};
+    justify-content: ${props => (props.justifyContent)};
+    align-items: ${props => (props.alignItems)};
+`   

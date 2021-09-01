@@ -17,7 +17,6 @@ const pages = {
 
 const Index5 = ({ props }) => {
   //console.log( 'dcs', ...{ ...section, fontSize: '42px'  });
-  console.log({ ...sectionStyles, fontSize: '40px'})
   
     return (
         <Layout>
@@ -33,6 +32,8 @@ const Index5 = ({ props }) => {
                We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
             </Text>
             <Text {...{ ...sectionStyles, fontSize: '22px'}}>
+               We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
+               We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
                We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
             </Text>
             <StaticImage src="../../images/us.jpg" alt="....." />
