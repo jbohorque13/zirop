@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Title } from './styled/';
-import SectionUI from './Section';
+import { Title } from 'components/styled/';
+import SectionUI from 'components/Section';
 
 
 const Footer = (props) => {

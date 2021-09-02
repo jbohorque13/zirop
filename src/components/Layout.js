@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Context from './Context';
-import HeaderMenu from './HeaderMenu';
-import { GlobalStyle } from "../styles/index";
+import Context from 'components/Context';
+import HeaderMenu from 'components/HeaderMenu';
+import { GlobalStyle } from "styles/index";
 
 // styles
 

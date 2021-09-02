@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, } from './styled/index';
+import { Section, } from 'components/styled/index';
 
 /* props => 
    * title: string
