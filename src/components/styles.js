@@ -1,4 +1,4 @@
-import { colorGlobal } from '../styles/index';
+import { colorGlobal } from 'styles/index';
 
 export const linkStyles = {
     fontSize: 20,

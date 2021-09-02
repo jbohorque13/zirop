@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { ItemList, List } from './styled/';
+import { ItemList, List } from 'components/styled/';
 import { Link } from "gatsby"
-import { linkStyles, listStyles, itemListStyles } from './styles';
-import Context from '../components/Context';
+import { linkStyles, listStyles, itemListStyles } from 'components/styles';
+import Context from 'components/Context';
 
 const HeaderMenu = (props) => {
     const { pages } = props;

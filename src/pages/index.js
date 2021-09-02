@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from "gatsby";
-import Layout from '../common/components/Layout';
+import Layout from 'components/Layout';
 // imports common components 
-import SectionUI from '../common/components/Section';
-import { Text, Title } from '../common/components/styled';
-import { sectionStyles, titleStyles, linkButtonStyles } from '../common/components/styles';
+import SectionUI from 'components/Section';
+import { Text, Title } from 'components/styled';
+import { sectionStyles, titleStyles, linkButtonStyles } from 'components/styles';
 
 // markup
 const IndexPages = ({ props }) => {
