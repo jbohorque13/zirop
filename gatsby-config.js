@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.zirop.xyz",
     title: "zirop",
+    decription: "Web de agencia de desarrollo de web."
   },
   plugins: [
     "gatsby-plugin-styled-components",

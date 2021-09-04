@@ -6,7 +6,13 @@ import Layout from 'components/Layout';
 import SectionUI from 'components/Section';
 import { Text, Title } from 'components/styled';
 import { sectionStyles, titleStyles, linkButtonStyles } from 'components/styles';
+// Specified Styles
 
+/* const section = {
+  flexDirection: 'row', 
+  paddingHorizontal: '50px', 
+  paddingVertical: '40px'
+} */
 // markup
 const IndexPages = ({ props }) => {
   return (

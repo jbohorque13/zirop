@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Context from 'components/Context';
 import HeaderMenu from 'components/HeaderMenu';
 import { GlobalStyle } from "styles/index";
-
+import { userMetaDataQuery } from 'components/hooks/userMetaDataQuery';
 // styles
 
 const pages = {
@@ -16,6 +16,10 @@ const pages = {
 const Layout = ({ children }) => {
     const [pageYScroll, setPageYScroll] = useState(0);
     const [showMenu, setShowMenu] = useState(true);
+    if(showMenu) {
+      const data = userMetaDataQuery();
+      console.log(" ",  data);
+    }
 
     useEffect(() => {
       const handleScroll = () => {
@@ -34,9 +38,7 @@ const Layout = ({ children }) => {
     return (
         <Context.Provider value={showMenu}> 
           <GlobalStyle theme="purple" />
-          <HeaderMenu 
-            pages={pages}
-          />
+          <HeaderMenu pages={pages} />
           
           {children}
         </Context.Provider>
