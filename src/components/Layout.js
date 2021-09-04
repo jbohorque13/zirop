@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';  
 import Context from 'components/Context';
 import HeaderMenu from 'components/HeaderMenu';
 import { GlobalStyle } from "styles/index";
-import { userMetaDataQuery } from 'components/hooks/userMetaDataQuery';
+import { useMetaDataQuery } from 'components/hooks/useMetaDataQuery';
+import { useConfig } from 'components/hooks/useConfig';
 // styles
 
 const pages = {
@@ -16,15 +18,12 @@ const pages = {
 const Layout = ({ children }) => {
     const [pageYScroll, setPageYScroll] = useState(0);
     const [showMenu, setShowMenu] = useState(true);
-    if(showMenu) {
-      const data = userMetaDataQuery();
-      console.log(" ",  data);
-    }
+    const data = useMetaDataQuery();
+    const menu = useConfig();
 
     useEffect(() => {
       const handleScroll = () => {
         const { pageYOffset } = window;
-        console.log(pageYOffset, pageYScroll);
         if (pageYOffset > pageYScroll) {
           setShowMenu(false)
         } else {
@@ -38,13 +37,15 @@ const Layout = ({ children }) => {
     return (
         <Context.Provider value={showMenu}> 
           <GlobalStyle theme="purple" />
-          <HeaderMenu pages={pages} />
+          <HeaderMenu pages={menu} />
           
           {children}
         </Context.Provider>
     )
 }
 
-
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Layout;

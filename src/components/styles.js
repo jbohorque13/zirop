@@ -30,6 +30,7 @@ export const sectionStyles = {
     color: '#000',
     fontSize: '36px',
     flexDirection: 'column',
+    paddingVertical: '25px',
 }
 
 export const titleStyles = {

@@ -10,10 +10,10 @@ const HeaderMenu = (props) => {
     if (value) {
         return (
             <List {...listStyles}>
-                {Object.keys(pages).map((element, key) => (
-                    <ItemList {...itemListStyles} key={`${pages[element]}${key}`}>
-                        <Link to={`/${element}`} style={linkStyles}>
-                            { pages[element] }
+                {pages.map((element) => (
+                    <ItemList {...itemListStyles} key={`${element.id}`}>
+                        <Link to={`/${element.page}`} style={linkStyles}>
+                            { element.name }
                         </Link>
                     </ItemList>
                 ))}

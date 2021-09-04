@@ -2,22 +2,23 @@ import * as React from 'react';
 
 import Layout from 'components/Layout';
 // imports common components 
-import HeaderMenu from 'components/HeaderMenu';
-const pages = {
-    'abouts-us': 'About Us',
-    'our-services': 'Our Services',
-    'our-culture': 'Our Culture',
-    'founders': 'Founders',
-    'contact': 'Contact',
-}
+
+import { Text, Title } from 'components/styled';
+
+import SectionUI from 'components/Section';
+import { sectionStyles } from 'components/styles';
 
 const Index4 = ({ props }) => {
     return (
         <Layout>
-          <HeaderMenu 
-            {...props}
-            pages={pages}
-          />
+          <SectionUI style={{ ...sectionStyles, paddingHorizontal: '25px' }}>
+            <Title {...sectionStyles }>
+               Contact
+            </Title>
+            <Text { ...sectionStyles }>
+              .....
+            </Text>
+          </SectionUI>
         </Layout>
       ) 
 } 

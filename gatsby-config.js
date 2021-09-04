@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.zirop.xyz",
     title: "zirop",
-    decription: "Web de agencia de desarrollo de web."
+    description: "Web de agencia de desarrollo de web."
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -24,5 +24,18 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [`gatsby-remark-reading-time`],
+      },
+    }
   ],
 };
