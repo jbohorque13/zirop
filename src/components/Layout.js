@@ -7,14 +7,6 @@ import { useMetaDataQuery } from 'components/hooks/useMetaDataQuery';
 import { useConfig } from 'components/hooks/useConfig';
 // styles
 
-const pages = {
-  'abouts-us': 'About Us',
-  'our-services': 'Our Services',
-  'our-culture': 'Our Culture',
-  'founders': 'Founders',
-  'contact': 'Contact',
-}
-
 const Layout = ({ children }) => {
     const [pageYScroll, setPageYScroll] = useState(0);
     const [showMenu, setShowMenu] = useState(true);
