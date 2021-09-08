@@ -14,6 +14,7 @@ export const listStyles = {
     flex: '1',
     padding: '8px 0',
     margin: '0',
+    zIndex: 50,
 }
 
 export const itemListStyles = {
@@ -34,7 +35,7 @@ export const sectionStyles = {
 }
 
 export const titleStyles = {
-    color: '#000',
+    color: '#fff',
     fontSize: '36px',
     fontWeight: 100,
 } 

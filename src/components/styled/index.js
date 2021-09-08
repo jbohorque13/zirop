@@ -10,6 +10,29 @@ export const Section = styled.section`
     background-color: ${props => (props.backgroundColor)};
 `
 
+export const Line = styled.div`
+    display: flex;
+    flex: 1;
+    position: absolute;
+    height: ${props => (props.height ? props.height : `50%`)};
+    left: 0;
+    top: ${props => (props.top)};
+    width: 4px;
+    background-color: ${props => (props.backgroundColor) ? (props.backgroundColor) : `#000`};
+`
+export const Row = styled.div`
+    display: flex;
+    display: 1;
+    position: ${props => (props.position) ? (props.position) : `inherit`};
+    height: 100%;
+    padding: ${props => (props.paddingVertical ? props.paddingVertical : '0px')} ${props => (props.paddingHorizontal ? props.paddingHorizontal : '0px')};
+    flex-direction:  ${props => (props.flexDirection)};
+    justify-content: ${props => (props.justifyContent) ? (props.justifyContent) : `center`};
+    align-self: ${props => (props.alignSelf ? props.alignSelf : 'flex-start')};
+    background-color: ${props => (props.backgroundColor) ? (props.backgroundColor) : `center`};
+    align-items: stretch;
+`
+
 export const Title = styled.h1`
     color: ${props => (props.color)};
     font-size: ${props => (props.fontSize)};
@@ -42,6 +65,7 @@ export const List = styled.ul`
     padding: ${props => props.padding};
     margin: ${props => props.margin};
     padding: ${props => props.padding};
+    z-index: ${props => props.zIndex};
 `
 
 export const ItemList = styled.li`
