@@ -19,22 +19,25 @@ const IndexPages = ({ props }) => {
   return (
     <Layout>
       <SectionUI style={{ ...sectionStyles, flexDirection: 'row', paddingHorizontal: '50px', paddingVertical: '40px', backgroundColor: '#373948' }}>
-        <RowUI style={{ ...sectionStyles, paddingHorizontal: '50px' }}>
-          <Title {...titleStyles }>
-            Abount Us 
-          </Title>
-          <Text {...{ ...sectionStyles, color: '#fff', fontSize: '25px'}}>
-              We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
-          </Text>
-          <Text {...{ ...sectionStyles, color: '#fff', fontSize: '18px'}}>
-              We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
-          </Text>
-          <Link to="/our-services" style={linkButtonStyles} >
-              Our Sevices
-          </Link>
-        </RowUI>
-        <RowUI style={{ alignSelf: `center` }}> 
-          <StaticImage src="../images/us.jpg" alt="....." />
+        <RowUI hasLine style={{ justifyContent: `center`, position: `relative` }}>
+          
+          <RowUI style={{ ...sectionStyles, paddingHorizontal: '50px' }}>
+            <Title {...titleStyles }>
+              Abount Us 
+            </Title>
+            <Text {...{ ...sectionStyles, color: '#fff', fontSize: '25px'}}>
+                We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
+            </Text>
+            <Text {...{ ...sectionStyles, color: '#fff', fontSize: '18px'}}>
+                We are a tech startup based out of LATAM, We provide digital solutions to personalized products or services focusing on UX, creativity and technological scalability.
+            </Text>
+            <Link to="/our-services" style={linkButtonStyles} >
+                Our Sevices
+            </Link>
+          </RowUI>
+          <RowUI style={{ alignSelf: `center` }}> 
+            <StaticImage src="../images/us.jpg" alt="....." />
+          </RowUI>
         </RowUI>
       </SectionUI>
       <SectionUI style={{ ...sectionStyles, flexDirection: 'row', paddingHorizontal: '50px', paddingVertical: '40px' }}>
